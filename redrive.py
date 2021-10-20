@@ -1,12 +1,5 @@
 """
 This script is used to redrive message in (src) queue to (tgt) queue
-
-The solution is to set the Target Queue as the Source Queue's Dead Letter Queue.
-Also set Source Queue's redrive policy, Maximum Receives to 1. 
-Also set Source Queue's VisibilityTimeout to 5 seconds (a small period)
-Then read data from the Source Queue.
-
-Source Queue's Redrive Policy will copy the message to the Target Queue.
 """
 import argparse
 import json
